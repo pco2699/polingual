@@ -1,0 +1,20 @@
+.container
+  .row
+    .col-sm-12
+      h1 Profile Update
+    .col-sm-12
+      form.form(name='form', ng-submit='prfl.update(form)', novalidiate)
+//      .form-group
+//	  label Full Name
+//	  input.form-control(type='text', name='full_name', ng-model='prfl.user.fullname')
+        .form-group
+          label Language
+          select.form-control(name='lang', ng-model='prfl.user.lang')
+            option(ng:repeat='lang_item in prfl.langs')
+//	.form-group
+//	  label Country
+//	  select.form-control(name='country', ng-model='prfl.user.country')
+//	    option(ng:repeat='country_item in prfl.countrys')
+//	.form-group
+//	  label Age
+//	  input.form-control(type='text', name='lang', ng-model='prfl.user.age', integer='')
