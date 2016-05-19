@@ -5,7 +5,7 @@ class ProfileComponent {
   constructor($http) {
     this.message = 'Hello';
     this.$http = $http;
-    this.langs= [];
+    this.langs = [];
   }
   $onInit() {
     this.$http.get('/api/lang').then(response => {
