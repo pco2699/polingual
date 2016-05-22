@@ -7,12 +7,23 @@ header#banner
 .container
   .row
     .col-lg-12
-      h1.page-header Features:
-      ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in $ctrl.awesomeThings')
-        li
-          a(href='#', uib-tooltip='{{thing.info}}')
-            | {{thing.name}}
-            button.close(type='button', ng-click='$ctrl.deleteThing(thing)') &times;
+      h1.page-header Why POLINGUAL?
+      ul
+        li Any you want!(9:0024:00)
+	li Easy everybady Language class on the phone
+	li Different teacher every class(Never bored,Different ways of talking)
+	li All native speakers exclusively selected and trained by Polingual
+	li Free class material that covers various topics
+	li Revision note after class
+
+.container
+  .row
+      .col-lg-12
+        h1.page-header WHY POLINGUAL?:
+	ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in $ctrl.awesomeThings')
+	li
+           a(href='#', uib-tooltip='{{thing.info}}')			                | {{thing.name}}
+           button.close(type='button', ng-click='$ctrl.deleteThing(thing)') &times;
 
   form.thing-form
     label Syncs in realtime across clients
