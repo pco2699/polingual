@@ -9,7 +9,7 @@ class CalenderComponent {
 
 angular.module('testAppApp')
   .component('calender', {
-    templateUrl: 'app/mypage/calender.html',
+    templateUrl: 'app/mypage/calender/calender.html',
     controller: CalenderComponent
   });
 
