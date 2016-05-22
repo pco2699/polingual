@@ -17777,3 +17777,358 @@ Waiting...
 SocketIO / [124.211.248.131:50126] CONNECTED
 SocketIO / [124.211.248.131:50127] CONNECTED
 SocketIO / [124.211.248.131:50126] DISCONNECTED
+SocketIO / [124.211.248.131:50127] DISCONNECTED
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "env:all" (env) task[24m
+
+[4mRunning "concurrent:pre" (concurrent) task[24m
+[32m>> [39mWarning: There are more tasks than your concurrency limit. After this limit[32m
+>> [39mis reached no further tasks will be run until the current tasks are[32m
+>> [39mcompleted. You can adjust the limit in the concurrent task options
+
+    [4mRunning "injector:sass" (injector) task[24m
+    [90mMissing option `template`, using `dest` as template instead[39m
+    Injecting [32mscss[39m files [90m(6 files)[39m
+
+    [32mDone, without errors.[39m
+
+
+    [4mExecution Time[24m[90m (2016-05-22 02:12:27 UTC)[39m
+    loading tasks           [34m486ms[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 79%[39m
+    loading grunt-injector   [34m45ms[39m  [34m▇▇▇ 7%[39m
+    injector:sass            [34m82ms[39m  [34m▇▇▇▇▇▇ 13%[39m
+    [35mTotal 615ms[39m
+
+    [4mRunning "ngconstant:app" (ngconstant) task[24m
+    Creating module testAppApp.constants at client/app/app.constant.js...[32mOK[39m
+
+    [32mDone, without errors.[39m
+
+
+    [4mExecution Time[24m[90m (2016-05-22 02:12:27 UTC)[39m
+    loading tasks              [34m484ms[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 73%[39m
+    loading grunt-ng-constant  [34m123ms[39m  [34m▇▇▇▇▇▇▇ 18%[39m
+    ngconstant:app              [34m54ms[39m  [34m▇▇▇ 8%[39m
+    [35mTotal 667ms[39m
+
+    [4mRunning "copy:constant" (copy) task[24m
+    Copied [36m1[39m file
+
+    [32mDone, without errors.[39m
+
+
+    [4mExecution Time[24m[90m (2016-05-22 02:12:28 UTC)[39m
+    loading tasks               [34m238ms[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 91%[39m
+    loading grunt-contrib-copy    [34m7ms[39m  [34m▇ 3%[39m
+    copy:constant                [34m15ms[39m  [34m▇▇ 6%[39m
+    [35mTotal 261ms[39m
+
+[4mRunning "tsd:install" (tsd) task[24m
+-> config: ./tsd.json
+
+[4mRunning "tsd:install_test" (tsd) task[24m
+-> config: ./tsd_test.json
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+[32m>> [39mWarning: There are more tasks than your concurrency limit. After this limit[32m
+>> [39mis reached no further tasks will be run until the current tasks are[32m
+>> [39mcompleted. You can adjust the limit in the concurrent task options
+
+    [4mRunning "copy:constant" (copy) task[24m
+    Copied [36m1[39m file
+
+    [32mDone, without errors.[39m
+
+
+    [4mExecution Time[24m[90m (2016-05-22 02:12:37 UTC)[39m
+    loading tasks               [34m499ms[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 92%[39m
+    loading grunt-contrib-copy   [34m12ms[39m  [34m▇ 2%[39m
+    copy:constant                [34m33ms[39m  [34m▇▇▇ 6%[39m
+    [35mTotal 545ms[39m
+
+    [4mRunning "jade:compile" (jade) task[24m
+    [32m>> [39m10 files created.
+
+    [32mDone, without errors.[39m
+
+
+    [4mExecution Time[24m[90m (2016-05-22 02:12:38 UTC)[39m
+    loading tasks               [34m624ms[39m  [34m▇▇▇▇▇▇▇▇▇▇▇ 32%[39m
+    loading grunt-contrib-jade   [34m22ms[39m  [34m▇ 1%[39m
+    jade:compile                 [34m1.3s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 67%[39m
+    [35mTotal 2s[39m
+
+    [4mRunning "ts:client" (ts) task[24m
+    [33mCompiling...[39m
+    [36mCleared fast compile cache for target: client[39m
+    [36m### Fast Compile >>client/app/account/account.ts[39m
+    [36m### Fast Compile >>client/app/account/login/login.controller.ts[39m
+    [36m### Fast Compile >>client/app/account/settings/settings.controller.ts[39m
+    [36m### Fast Compile >>client/app/account/signup/signup.controller.ts[39m
+    [36m### Fast Compile >>client/app/admin/admin.controller.ts[39m
+    [36m### Fast Compile >>client/app/admin/admin.module.ts[39m
+    [36m### Fast Compile >>client/app/admin/admin.router.ts[39m
+    [36m### Fast Compile >>client/app/app.ts[39m
+    [36m### Fast Compile >>client/app/main/main.controller.ts[39m
+    [36m### Fast Compile >>client/app/main/main.ts[39m
+    [36m### Fast Compile >>client/app/member/member.controller.ts[39m
+    [36m### Fast Compile >>client/app/member/member.ts[39m
+    [36m### Fast Compile >>client/app/profile/profile.ts[39m
+    [36m### Fast Compile >>client/components/auth/auth.module.ts[39m
+    [36m### Fast Compile >>client/components/auth/auth.service.ts[39m
+    [36m### Fast Compile >>client/components/auth/interceptor.service.ts[39m
+    [36m### Fast Compile >>client/components/auth/router.decorator.ts[39m
+    [36m### Fast Compile >>client/components/auth/user.service.ts[39m
+    [36m### Fast Compile >>client/components/footer/footer.directive.ts[39m
+    [36m### Fast Compile >>client/components/modal/modal.service.ts[39m
+    [36m### Fast Compile >>client/components/mongoose-error/mongoose-error.directive.ts[39m
+    [36m### Fast Compile >>client/components/navbar/navbar.controller.ts[39m
+    [36m### Fast Compile >>client/components/navbar/navbar.directive.ts[39m
+    [36m### Fast Compile >>client/components/socket/socket.mock.ts[39m
+    [36m### Fast Compile >>client/components/socket/socket.service.ts[39m
+    [36m### Fast Compile >>client/components/ui-router/ui-router.mock.ts[39m
+    [36m### Fast Compile >>client/components/util/util.module.ts[39m
+    [36m### Fast Compile >>client/components/util/util.service.ts[39m
+    [36m### Fast Compile >>client/typings/angularjs/angular.d.ts[39m
+    [36m### Fast Compile >>client/typings/jquery/jquery.d.ts[39m
+    [36m### Fast Compile >>client/typings/lodash/lodash.d.ts[39m
+    [36m### Fast Compile >>client/typings/socket.io-client/socket.io-client.d.ts[39m
+    [36m### Fast Compile >>client/typings/tsd.d.ts[39m
+    Using tsc v1.7.3
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(5,10): error TS2339: Property 'user' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(6,10): error TS2339: Property 'errors' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(7,10): error TS2339: Property 'submitted' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(9,10): error TS2339: Property 'Auth' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(10,10): error TS2339: Property '$state' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(14,10): error TS2339: Property 'submitted' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(17,12): error TS2339: Property 'Auth' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(18,21): error TS2339: Property 'user' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(19,24): error TS2339: Property 'user' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(23,14): error TS2339: Property '$state' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/login/login.controller.ts(26,14): error TS2339: Property 'errors' does not exist on type 'LoginController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(5,10): error TS2339: Property 'errors' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(6,10): error TS2339: Property 'submitted' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(8,10): error TS2339: Property 'Auth' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(12,10): error TS2339: Property 'submitted' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(15,12): error TS2339: Property 'Auth' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(15,37): error TS2339: Property 'user' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(15,60): error TS2339: Property 'user' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(17,16): error TS2339: Property 'message' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(21,16): error TS2339: Property 'errors' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/settings/settings.controller.ts(22,16): error TS2339: Property 'message' does not exist on type 'SettingsController'.
+    /home/ec2-user/testApp/client/app/account/signup/signup.controller.ts(11,10): error TS2339: Property 'Auth' does not exist on type 'SignupController'.
+    /home/ec2-user/testApp/client/app/account/signup/signup.controller.ts(12,10): error TS2339: Property '$state' does not exist on type 'SignupController'.
+    /home/ec2-user/testApp/client/app/account/signup/signup.controller.ts(19,12): error TS2339: Property 'Auth' does not exist on type 'SignupController'.
+    /home/ec2-user/testApp/client/app/account/signup/signup.controller.ts(20,25): error TS2339: Property 'name' does not exist on type '{}'.
+    /home/ec2-user/testApp/client/app/account/signup/signup.controller.ts(21,26): error TS2339: Property 'email' does not exist on type '{}'.
+    /home/ec2-user/testApp/client/app/account/signup/signup.controller.ts(22,29): error TS2339: Property 'password' does not exist on type '{}'.
+    /home/ec2-user/testApp/client/app/account/signup/signup.controller.ts(26,14): error TS2339: Property '$state' does not exist on type 'SignupController'.
+    /home/ec2-user/testApp/client/app/admin/admin.controller.ts(8,10): error TS2339: Property 'users' does not exist on type 'AdminController'.
+    /home/ec2-user/testApp/client/app/admin/admin.controller.ts(13,10): error TS2339: Property 'users' does not exist on type 'AdminController'.
+    /home/ec2-user/testApp/client/app/admin/admin.controller.ts(13,28): error TS2339: Property 'users' does not exist on type 'AdminController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(8,10): error TS2339: Property '$http' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(9,10): error TS2339: Property 'socket' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(10,10): error TS2339: Property 'awesomeThings' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(18,10): error TS2339: Property '$http' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(19,12): error TS2339: Property 'awesomeThings' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(20,12): error TS2339: Property 'socket' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(20,45): error TS2339: Property 'awesomeThings' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(25,14): error TS2339: Property 'newThing' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(26,12): error TS2339: Property '$http' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(26,51): error TS2339: Property 'newThing' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(27,12): error TS2339: Property 'newThing' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(32,10): error TS2339: Property '$http' does not exist on type 'MainController'.
+    /home/ec2-user/testApp/client/app/main/main.controller.ts(37,4): error TS2339: Property 'component' does not exist on type 'IModule'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(6,10): error TS2339: Property '$http' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(7,10): error TS2339: Property '$scope' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(8,10): error TS2339: Property 'socket' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(10,10): error TS2339: Property 'members' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(14,10): error TS2339: Property '$http' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(15,12): error TS2339: Property 'members' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(16,12): error TS2339: Property 'socket' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(16,46): error TS2339: Property 'members' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(21,14): error TS2339: Property '$scope' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(21,36): error TS2339: Property '$scope' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(22,12): error TS2339: Property '$http' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(22,44): error TS2339: Property '$scope' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(23,14): error TS2339: Property '$scope' does not exist on type 'MemberComponent'.
+    /home/ec2-user/testApp/client/app/member/member.controller.ts(30,4): error TS2339: Property 'component' does not exist on type 'IModule'.
+    /home/ec2-user/testApp/client/components/auth/auth.service.ts(31,30): error TS2339: Property '$promise' does not exist on type '{}'.
+    /home/ec2-user/testApp/client/components/auth/auth.service.ts(81,52): error TS2339: Property '_id' does not exist on type '{}'.
+    /home/ec2-user/testApp/client/components/auth/auth.service.ts(104,21): error TS2339: Property '$promise' does not exist on type '{}'.
+    /home/ec2-user/testApp/client/components/auth/auth.service.ts(149,36): error TS2339: Property 'role' does not exist on type '{}'.
+    /home/ec2-user/testApp/client/components/mongoose-error/mongoose-error.directive.ts(12,45): error TS2339: Property '$setValidity' does not exist on type '{}'.
+    /home/ec2-user/testApp/client/components/navbar/navbar.controller.ts(10,10): error TS2339: Property 'isLoggedIn' does not exist on type 'NavbarController'.
+    /home/ec2-user/testApp/client/components/navbar/navbar.controller.ts(11,10): error TS2339: Property 'isAdmin' does not exist on type 'NavbarController'.
+    /home/ec2-user/testApp/client/components/navbar/navbar.controller.ts(12,10): error TS2339: Property 'getCurrentUser' does not exist on type 'NavbarController'.
+    /home/ec2-user/testApp/client/components/navbar/navbar.controller.ts(13,10): error TS2339: Property 'menu' does not exist on type 'NavbarController'.
+
+    [32m>> [39m67 non-emit-preventing type warnings  
+    [32m>> [39mType errors only.
+
+    [32mTypeScript compilation complete: 4.53s for 34 TypeScript files.[39m
+
+    [32mDone, without errors.[39m
+
+
+    [4mExecution Time[24m[90m (2016-05-22 02:12:37 UTC)[39m
+    loading tasks     [34m497ms[39m  [34m▇▇▇▇ 9%[39m
+    loading grunt-ts  [34m360ms[39m  [34m▇▇▇ 7%[39m
+    ts:client          [34m4.6s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 84%[39m
+    [35mTotal 5.5s[39m
+
+    [4mRunning "sass:server" (sass) task[24m
+
+    [32mDone, without errors.[39m
+
+
+    [4mExecution Time[24m[90m (2016-05-22 02:12:41 UTC)[39m
+    loading tasks  [34m545ms[39m  [34m▇▇▇▇▇ 10%[39m
+    sass:server     [34m4.9s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 89%[39m
+    [35mTotal 5.5s[39m
+
+[4mRunning "injector:scripts" (injector) task[24m
+[90mMissing option `template`, using `dest` as template instead[39m
+Injecting [32mts[39m files [90m(26 files)[39m
+
+[4mRunning "injector:sass" (injector) task[24m
+[90mMissing option `template`, using `dest` as template instead[39m
+Injecting [32mscss[39m files [90m(6 files)[39m
+
+[4mRunning "injector:css" (injector) task[24m
+[90mMissing option `template`, using `dest` as template instead[39m
+[32m>> [39mNothing changed
+
+[4mRunning "wiredep:client" (wiredep) task[24m
+
+[4mRunning "postcss:dist" (postcss) task[24m
+[32m>> [39m1 processed stylesheet created.
+[32m>> [39m1 sourcemap created.
+
+[4mRunning "express:dev" (express) task[24m
+[36mStarting [39mbackground Express server
+Debugger listening on port 5858
+Express server listening on 9000, in development mode
+
+[4mRunning "wait" task[24m
+[32m>> [39mWaiting for server reload...
+finished populating Members
+Done waiting!
+
+[4mRunning "watch" task[24m
+Waiting...
+SocketIO / [220.219.18.26:63727] CONNECTED
+Warning: a promise was created in a handler but was not returned from it
+    at MongoStore.touch (/home/ec2-user/testApp/node_modules/connect-mongo/src/index.js:277:18)
+    at ServerResponse.end (/home/ec2-user/testApp/node_modules/express-session/index.js:301:15)
+    at ServerResponse.send (/home/ec2-user/testApp/node_modules/express/lib/response.js:204:10)
+    at ServerResponse.json (/home/ec2-user/testApp/node_modules/express/lib/response.js:249:15)
+    at thing.controller.js:19:30
+    at tryOnImmediate (timers.js:534:15)
+    at processImmediate [as _immediateCallback] (timers.js:514:5)
+From previous event:
+    at index (thing.controller.js:65:6)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/ec2-user/testApp/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at logger (/home/ec2-user/testApp/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+[0mGET /api/things [32m200 [0m20.325 ms - -[0m
+SocketIO / [220.219.18.26:63727] DISCONNECTED
+SocketIO / [220.219.18.26:60701] CONNECTED
+Warning: a promise was created in a handler but was not returned from it
+    at MongoStore.touch (/home/ec2-user/testApp/node_modules/connect-mongo/src/index.js:277:18)
+    at ServerResponse.end (/home/ec2-user/testApp/node_modules/express-session/index.js:301:15)
+    at ServerResponse.send (/home/ec2-user/testApp/node_modules/express/lib/response.js:204:10)
+    at ServerResponse.json (/home/ec2-user/testApp/node_modules/express/lib/response.js:249:15)
+    at thing.controller.js:19:30
+    at tryOnImmediate (timers.js:534:15)
+    at processImmediate [as _immediateCallback] (timers.js:514:5)
+From previous event:
+    at index (thing.controller.js:65:6)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/ec2-user/testApp/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at logger (/home/ec2-user/testApp/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+[0mGET /api/things [36m304 [0m4.338 ms - -[0m
+Warning: a promise was created in a handler but was not returned from it
+    at MongoStore.touch (/home/ec2-user/testApp/node_modules/connect-mongo/src/index.js:277:18)
+    at ServerResponse.end (/home/ec2-user/testApp/node_modules/express-session/index.js:301:15)
+    at ServerResponse.send (/home/ec2-user/testApp/node_modules/express/lib/response.js:204:10)
+    at ServerResponse.json (/home/ec2-user/testApp/node_modules/express/lib/response.js:249:15)
+    at thing.controller.js:19:30
+    at tryOnImmediate (timers.js:534:15)
+    at processImmediate [as _immediateCallback] (timers.js:514:5)
+From previous event:
+    at index (thing.controller.js:65:6)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/ec2-user/testApp/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:271:10)
+    at logger (/home/ec2-user/testApp/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/home/ec2-user/testApp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:312:13)
+    at /home/ec2-user/testApp/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ec2-user/testApp/node_modules/express/lib/router/index.js:330:12)
+[0mGET /api/things [36m304 [0m4.287 ms - -[0m
+SocketIO / [220.219.18.26:60701] DISCONNECTED
+SocketIO / [220.219.18.26:61730] CONNECTED
+SocketIO / [220.219.18.26:61730] DISCONNECTED
