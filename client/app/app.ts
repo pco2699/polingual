@@ -11,6 +11,7 @@ angular.module('testAppApp', [
   'ui.router',
   'ui.bootstrap',
   'validation.match'
+  'ui.calendar'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
