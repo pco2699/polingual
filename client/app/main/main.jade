@@ -17,7 +17,7 @@ header#banner
         li Revision note after class
         
   ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in $ctrl.awesomeThings')
-	li
+  li
            a(href='#', uib-tooltip='{{thing.info}}')			                | {{thing.name}}
            button.close(type='button', ng-click='$ctrl.deleteThing(thing)') &times;
 
