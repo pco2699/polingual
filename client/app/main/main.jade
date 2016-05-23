@@ -15,8 +15,8 @@ header#banner
         li All native speakers exclusively selected and trained by Polingual
         li Free class material that covers various topics
         li Revision note after class
-
-	ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in $ctrl.awesomeThings')
+        
+  ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in $ctrl.awesomeThings')
 	li
            a(href='#', uib-tooltip='{{thing.info}}')			                | {{thing.name}}
            button.close(type='button', ng-click='$ctrl.deleteThing(thing)') &times;
