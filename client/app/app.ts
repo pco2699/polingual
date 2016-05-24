@@ -10,7 +10,7 @@ angular.module('testAppApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'validation.match'
+  'validation.match',
   'ui.calendar'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
