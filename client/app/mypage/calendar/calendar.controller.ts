@@ -1,15 +1,15 @@
 'use strict';
 (function(){
 
-class CalenderComponent {
+class CalendarComponent {
   constructor() {
     this.message = 'Hello';
   }
 }
 
 angular.module('testAppApp')
-  .component('calender', {
-    templateUrl: 'app/mypage/calender/calender.html',
+  .component('calendar', {
+    templateUrl: 'app/mypage/calender/calendar.html',
     controller: CalenderComponent
   });
 
