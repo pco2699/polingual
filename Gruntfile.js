@@ -623,19 +623,8 @@ module.exports = function (grunt) {
       }
     },
 
-    tsd: {
-      install: {
-        options: {
-          command: 'reinstall',
-          config: './tsd.json'
-        }
-      },
-      install_test: {
-        options: {
-          command: 'reinstall',
-          config: './tsd_test.json'
-        }
-      }
+    typings: {
+      install: {}
     },
 
     // Compiles Sass to CSS
@@ -756,7 +745,7 @@ module.exports = function (grunt) {
         'clean:server',
         'env:all',
         'concurrent:pre',
-        'tsd',
+        'typings',
         'concurrent:server',
         'injector',
         'wiredep:client',
@@ -769,14 +758,13 @@ module.exports = function (grunt) {
       'clean:server',
       'env:all',
       'concurrent:pre',
-      'tsd',
+      'typings',
       'concurrent:server',
       'injector',
       'wiredep:client',
       'postcss',
       'express:dev',
       'wait',
-//     'open',
       'watch'
     ]);
   });

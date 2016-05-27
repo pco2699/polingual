@@ -1,0 +1,11 @@
+{
+  "name": "test-app",
+  "resolution": "client/typings",
+  "globalDependencies": {
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#40c60850ad6c8175a62d5ab48c4e016ea5b3dffe",
+    "angular-bootstrap-calendar": "registry:dt/angular-bootstrap-calendar#0.0.0+20160316171810",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#40c60850ad6c8175a62d5ab48c4e016ea5b3dffe",
+    "lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#40c60850ad6c8175a62d5ab48c4e016ea5b3dffe",
+    "socket.io-client": "github:DefinitelyTyped/DefinitelyTyped/socket.io-client/socket.io-client.d.ts#40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
+  }
+}
