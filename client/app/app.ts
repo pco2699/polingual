@@ -4,6 +4,7 @@ angular.module('testAppApp', [
   'testAppApp.auth',
   'testAppApp.admin',
   'testAppApp.constants',
+  'mwl.calendar',
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -11,7 +12,7 @@ angular.module('testAppApp', [
   'ui.router',
   'ui.bootstrap',
   'validation.match',
-  'ui.calendar'
+  'ngAnimate'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

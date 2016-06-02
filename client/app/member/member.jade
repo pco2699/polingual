@@ -6,7 +6,7 @@
     .col-sm-12
       form.form-inline
         label Name
-        input#name(type="text", name="name", ng-model="member.name")
+        input#name(type="text", name="name", ng-model="$ctrl.member.name")
         button.btn.btn-primary.btn-sm(ng-click="$ctrl.createMember()") Register
 
     .col-sm-12

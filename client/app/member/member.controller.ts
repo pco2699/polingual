@@ -2,12 +2,9 @@
 (function(){
 
 class MemberComponent {
-  constructor($http, $scope, socket) {
-    this.$http = $http;
-    this.$scope = $scope;
-    this.socket = socket;
-
-    this.members = [];
+  members = [];
+  member = {name: ''};
+  constructor(public $http, public $scope, public socket) {
   }
 
   $onInit() {
@@ -18,7 +15,7 @@ class MemberComponent {
   }
 
   createMember() {
-    if (this.$scope.member && this.$scope.member.name) {
+    if (this.member && this.member.name) {
       this.$http.post('/api/members', this.$scope.member).then(() => {
         this.$scope.member.name = '';
       });

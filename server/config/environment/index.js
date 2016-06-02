@@ -40,6 +40,14 @@ var all = {
       }
     }
   }
+
+  oauth: {
+    facebook:{
+      clientID: '985894521509077',
+      clientSecret: 'f3fd2d48bff6876293a78f1cf0fd4c68',
+      callbackURL: 'auth/callback'
+    }
+  }
 };
 
 // Export the config object based on the NODE_ENV

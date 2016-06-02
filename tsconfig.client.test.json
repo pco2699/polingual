@@ -10,6 +10,9 @@
     ],
     "files": [
         "client/app/main/main.controller.spec.ts",
+        "client/app/member/member.controller.spec.ts",
+        "client/app/mypage/mypage.controller.spec.ts",
+        "client/app/profile/profile.controller.spec.ts",
         "client/components/socket/socket.mock.ts",
         "client/components/ui-router/ui-router.mock.ts",
         "client/test_typings/angular-protractor/angular-protractor.d.ts",

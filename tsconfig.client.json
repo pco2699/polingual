@@ -44,6 +44,7 @@
         "client/typings/globals/angular/index.d.ts",
         "client/typings/globals/jquery/index.d.ts",
         "client/typings/globals/lodash/index.d.ts",
+        "client/typings/globals/moment/index.d.ts",
         "client/typings/globals/socket.io-client/index.d.ts",
         "client/typings/index.d.ts"
     ]

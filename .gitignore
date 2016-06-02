@@ -12,6 +12,7 @@ nohup.out
 .DS_Store
 .AppleDouble
 .LSOverride
+tsconfig.json
 
 # Icon must ends with two
 .

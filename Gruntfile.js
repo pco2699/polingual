@@ -637,7 +637,7 @@ module.exports = function (grunt) {
 	    '<%= yeoman.client %>/bower_components',
 	    '<%= yeoman.client %>/app/main'
 	    ],
-          compass: true 
+          compass: true
         },
         files: {
           '.tmp/app/app.css' : '<%= yeoman.client %>/app/app.scss'
@@ -791,7 +791,7 @@ module.exports = function (grunt) {
         'concurrent:pre',
         'ts:client',
         'ts:client_test',
-        'tsd',
+        'typings',
         'concurrent:test',
         'injector',
         'postcss',
@@ -899,4 +899,11 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('light', [
+    'express:dev',
+    'wait',
+    'watch'
+  ]);
+  
 };
