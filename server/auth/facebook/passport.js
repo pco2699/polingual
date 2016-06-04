@@ -1,35 +1,19 @@
 import passport from 'passport';
-import {Strategy as LocalStrategy} from 'passport-local';
+import {Strategy as FacebookStrategy} from 'passport-facebook';
+import config from '../../config/environment'
 
-function localAuthenticate(User, email, password, done) {
-  User.findOne({
-    email: email.toLowerCase()
-  }).exec()
-    .then(user => {
-      if (!user) {
-        return done(null, false, {
-          message: 'This email is not registered.'
-        });
-      }
-      user.authenticate(password, function(authError, authenticated) {
-        if (authError) {
-          return done(authError);
-        }
-        if (!authenticated) {
-          return done(null, false, { message: 'This password is not correct.' });
-        } else {
-          return done(null, user);
-        }
-      });
-    })
-    .catch(err => done(err));
-}
-
-export function setup(User, config) {
-  passport.use(new LocalStrategy({
-    usernameField: 'email',
-    passwordField: 'password' // this is the virtual field on the model
-  }, function(email, password, done) {
-    return localAuthenticate(User, email, password, done);
+export function initPassport(passport){
+  passport.use(new FacebookStrategy(config.oauth.facebook, (accessToken, refreshToken, profile, done) => {
+    process.nextTick(() => {
+      return done(null, profile);
+    });
   }));
-}
+
+  passport.serializeUser((user, done) => {
+    done(null, user);
+  });
+
+  passport.deserializeUser((obj, done) => {
+    done(null, obj);
+  });
+};

@@ -2,14 +2,16 @@
 
 class SignupController {
   //start-non-standard
-  user = {};
+  user = {
+    name: '',
+    email: '',
+    password: ''
+  };
   errors = {};
   submitted = false;
   //end-non-standard
 
-  constructor(Auth, $state) {
-    this.Auth = Auth;
-    this.$state = $state;
+  constructor(public Auth, public $state) {
   }
 
   register(form) {
