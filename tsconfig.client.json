@@ -24,6 +24,7 @@
         "client/app/mypage/calendar/calendar.controller.ts",
         "client/app/mypage/mypage.controller.ts",
         "client/app/mypage/mypage.ts",
+        "client/app/mypage/profile/profile.controller.ts",
         "client/app/profile/profile.ts",
         "client/components/auth/auth.module.ts",
         "client/components/auth/auth.service.ts",
