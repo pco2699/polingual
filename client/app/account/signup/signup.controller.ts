@@ -41,5 +41,5 @@ class SignupController {
   }
 }
 
-angular.module('testAppApp')
+angular.module('polingual')
   .controller('SignupController', SignupController);

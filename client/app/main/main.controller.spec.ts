@@ -3,7 +3,7 @@
 describe('Component: mainComponent', function() {
 
   // load the controller's module
-  beforeEach(module('testAppApp'));
+  beforeEach(module('polingual'));
   beforeEach(module('stateMock'));
   beforeEach(module('socketMock'));
 

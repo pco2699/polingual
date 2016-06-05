@@ -26,7 +26,7 @@ function authInterceptor($rootScope, $q, $cookies, $injector, Util) {
   };
 }
 
-angular.module('testAppApp.auth')
+angular.module('polingual.auth')
   .factory('authInterceptor', authInterceptor);
 
 })();

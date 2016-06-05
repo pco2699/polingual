@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('testAppApp.auth', [
-  'testAppApp.constants',
-  'testAppApp.util',
+angular.module('polingual.auth', [
+  'polingual.constants',
+  'polingual.util',
   'ngCookies',
   'ui.router'
 ])

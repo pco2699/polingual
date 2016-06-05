@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('testAppApp.util', []);
+angular.module('polingual.util', []);

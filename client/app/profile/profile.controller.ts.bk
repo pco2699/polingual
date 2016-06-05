@@ -7,13 +7,9 @@ class ProfileComponent {
     this.$http = $http;
     this.langs = [];
   }
-  $onInit() {
-    this.$http.get('/api/lang').then(response => {
-      this.langs = response.data;
-  });
 }
 
-angular.module('testAppApp')
+angular.module('polingual')
   .component('profile', {
     templateUrl: 'app/profile/profile.html',
     controller: ProfileComponent,

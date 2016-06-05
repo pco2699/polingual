@@ -59,7 +59,7 @@ function UtilService($window) {
   return Util;
 }
 
-angular.module('testAppApp.util')
+angular.module('polingual.util')
   .factory('Util', UtilService);
 
 })();

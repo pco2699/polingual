@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('testAppApp')
+angular.module('polingual')
   .factory('Modal', function($rootScope, $uibModal) {
     /**
      * Opens a modal

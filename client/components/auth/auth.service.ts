@@ -183,7 +183,7 @@ function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
   return Auth;
 }
 
-angular.module('testAppApp.auth')
+angular.module('polingual.auth')
   .factory('Auth', AuthService);
 
 })();

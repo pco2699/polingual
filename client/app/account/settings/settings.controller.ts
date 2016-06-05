@@ -25,5 +25,5 @@ class SettingsController {
   }
 }
 
-angular.module('testAppApp')
+angular.module('polingual')
   .controller('SettingsController', SettingsController);

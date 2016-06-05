@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('testAppApp')
+angular.module('polingual')
   .directive('footer', function() {
     return {
       templateUrl: 'components/footer/footer.html',

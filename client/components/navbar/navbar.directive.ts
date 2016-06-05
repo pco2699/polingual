@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('testAppApp')
+angular.module('polingual')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',

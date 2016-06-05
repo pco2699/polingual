@@ -13,6 +13,7 @@ nohup.out
 .AppleDouble
 .LSOverride
 tsconfig.json
+.tsccache
 
 # Icon must ends with two
 .
