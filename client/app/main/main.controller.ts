@@ -33,7 +33,7 @@ class MainController {
   }
 }
 
-angular.module('polingual')
+angular.module('polingualApp')
   .component('main', {
     templateUrl: 'app/main/main.html',
     controller: MainController

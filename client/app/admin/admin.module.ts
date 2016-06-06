@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('polingual.admin', [
-  'polingual.auth',
+angular.module('polingualApp.admin', [
+  'polingualApp.auth',
   'ui.router'
 ]);

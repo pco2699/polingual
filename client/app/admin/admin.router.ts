@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('polingual.admin')
+angular.module('polingualApp.admin')
   .config(function($stateProvider) {
     $stateProvider
       .state('admin', {

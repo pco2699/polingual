@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('polingual')
+angular.module('polingualApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('profile', {

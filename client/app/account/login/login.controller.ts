@@ -29,5 +29,5 @@ class LoginController {
   }
 }
 
-angular.module('polingual')
+angular.module('polingualApp')
   .controller('LoginController', LoginController);

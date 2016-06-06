@@ -21,7 +21,7 @@ function UserResource($resource) {
   });
 }
 
-angular.module('polingual.auth')
+angular.module('polingualApp.auth')
   .factory('User', UserResource);
 
 })();

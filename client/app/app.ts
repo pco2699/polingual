@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('polingual', [
-  'polingual.auth',
-  'polingual.admin',
-  'polingual.constants',
+angular.module('polingualApp', [
+  'polingualApp.auth',
+  'polingualApp.admin',
+  'polingualApp.constants',
   'mwl.calendar',
   'ngCookies',
   'ngResource',

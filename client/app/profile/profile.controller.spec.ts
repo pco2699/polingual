@@ -3,7 +3,7 @@
 describe('Component: ProfileComponent', function () {
 
   // load the controller's module
-  beforeEach(module('polingual'));
+  beforeEach(module('polingualApp'));
 
   var ProfileComponent, scope;
 

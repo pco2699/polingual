@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('polingual')
+angular.module('polingualApp')
   .directive('mongooseError', function() {
     return {
       restrict: 'A',

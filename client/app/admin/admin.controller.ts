@@ -14,7 +14,7 @@ class AdminController {
   }
 }
 
-angular.module('polingual.admin')
+angular.module('polingualApp.admin')
   .controller('AdminController', AdminController);
 
 })();

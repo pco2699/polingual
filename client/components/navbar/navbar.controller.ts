@@ -18,5 +18,5 @@ class NavbarController {
   }
 }
 
-angular.module('polingual')
+angular.module('polingualApp')
   .controller('NavbarController', NavbarController);

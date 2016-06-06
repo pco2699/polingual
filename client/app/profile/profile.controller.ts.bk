@@ -9,7 +9,7 @@ class ProfileComponent {
   }
 }
 
-angular.module('polingual')
+angular.module('polingualApp')
   .component('profile', {
     templateUrl: 'app/profile/profile.html',
     controller: ProfileComponent,
