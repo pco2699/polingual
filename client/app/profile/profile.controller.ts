@@ -7,8 +7,15 @@ class ProfileComponent {
                   {name:'Duck',value:'Duck'}];
   public message;
   public user;
+  public gender;
 
-  constructor(public $http, public Auth, public $state) {
+  constructor(public $http, public Auth, public $state, public appConfig) {
+  }
+
+  $onInit(){
+    console.log(this.gender);
+    console.log(this.appConfig);
+    this.gender = this.appConfig.gender;
   }
 
   update(){

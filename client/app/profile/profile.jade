@@ -13,10 +13,7 @@
           select.form-control(name='lang', ng-model='prfl.user.lang', ng-options='lang.value as lang.name for lang in prfl.langs')
         .form-group
           label Gender
-          select.form-control(name='Gender', ng-model='prfl.user.gender')
-            option(value='Male') Male
-            option(value='Female') Female
-            option(value='Other') Other
+          select.form-control(name='Gender', ng-model='prfl.user.gender', ng-options='gen_item for gen_item in prfl.gender')
         button.btn(type='submit') Register
 //      .form-group
 //	  label Full Name
