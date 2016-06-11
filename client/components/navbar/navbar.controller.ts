@@ -10,6 +10,10 @@ class NavbarController {
               {name:'Female',value:'Female'},
               {name:'Other',value:'Other'}];
 
+  public langs =  [{name:'Japanese', value:'Japanese'},
+	           {name:'English', value:'English'},
+                   {name:'Duck',value:'Duck'}];
+
   constructor(Auth) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
