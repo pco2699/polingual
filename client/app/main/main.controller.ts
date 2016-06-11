@@ -4,18 +4,12 @@
 
 class MainController {
 
-  public test = 'fail';
-  public langs =  [{name:'Japanese', value:'Japanese'},
-	                    {name:'English', value:'English'},
-                    {name:'Duck',value:'Duck'}];
+  public langs;
 
-  constructor($http, $scope, socket) {
+  constructor($http, $scope, socket, public appConfig) {
     this.$http = $http;
     this.socket = socket;
     this.awesomeThings = [];
-    this.langs = [{name:'Japanese', value:'Japanese'},
-	          {name:'English', value:'English'},
-                  {name:'Duck',value:'Duck'}];
 
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');
@@ -23,21 +17,7 @@ class MainController {
   }
 
   $onInit() {
-    //this.$http.get('/api/things').then(response => {
-    //  this.awesomeThings = response.data;
-    //  this.socket.syncUpdates('thing', this.awesomeThings);
-    //});
-  }
-
-  addThing() {
-    if (this.newThing) {
-      this.$http.post('/api/things', { name: this.newThing });
-      this.newThing = '';
-    }
-  }
-
-  deleteThing(thing) {
-    this.$http.delete('/api/things/' + thing._id);
+    this.langs = this.appConfig.langs;
   }
 }
 

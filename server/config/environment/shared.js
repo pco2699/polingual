@@ -3,5 +3,6 @@
 exports = module.exports = {
   // List of user roles
   userRoles: ['guest', 'user', 'admin'],
-  gender: ['Male', 'Female', 'Other']
+  gender: ['Male', 'Female', 'Other'],
+  langs: ['English', 'Japanese', 'Spanish']
 };

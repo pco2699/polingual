@@ -28,7 +28,7 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
              label Gender
              select.form-control(name='gend', ng-model='gend', ng-options='gend.value as gend.name for gend in nav.genders')   
 
-          .form-group
+          .form-group(ng-show='isCurState("main")')
              label Languege
              select.form-control(name='lang', ng-model='lang', ng-options='lang.value as lang.name for lang in nav.langs')
 

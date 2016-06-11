@@ -5,7 +5,7 @@ header#banner
     form.form(name='language_form')
         .form-group
           label Language
-          select.form-control(name='lang', ng-model='selected', ng-options='lang.value as lang.name for lang in $ctrl.langs')
+          select.form-control(name='lang', ng-model='selected', ng-options='lang as lang for lang in $ctrl.langs')
 .container
   .row
     .col-lg-12
