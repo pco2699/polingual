@@ -6,6 +6,10 @@ class NavbarController {
   isCollapsed = true;
   //end-non-standard
 
+  public genders = [{name:'Male',value:'Male'},
+              {name:'Female',value:'Female'},
+              {name:'Other',value:'Other'}];
+
   constructor(Auth) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;

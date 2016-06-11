@@ -2,8 +2,10 @@ header#banner
   .container
     h1.lead POLINGUAL
     h2.lead Hello there, are you new?
-    button.btn-success(type='submit', ng-click='$ctrl.signup()') Start POLINGUAL
-
+    form.form(name='language_form')
+        .form-group
+          label Language
+          select.form-control(name='lang', ng-model='selected', ng-options='lang.value as lang.name for lang in $ctrl.langs')
 .container
   .row
     .col-lg-12
