@@ -8,6 +8,9 @@ class MainController {
     this.$http = $http;
     this.socket = socket;
     this.awesomeThings = [];
+    this.langs = [{name:'Japanese', value:'Japanese'},
+	               {name:'English', value:'English'},
+               {name:'Duck',value:'Duck'}];
 
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');
@@ -36,7 +39,8 @@ class MainController {
 angular.module('polingualApp')
   .component('main', {
     templateUrl: 'app/main/main.html',
-    controller: MainController
+    controller: MainController,
+    controllerAs: 'mainc'
   });
 
 })();
