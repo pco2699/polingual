@@ -39,6 +39,7 @@ var UserSchema = new Schema({
   language: String,
   provider: String,
   salt: String,
+  photos: [],
   facebook: {},
   github: {}
 });
