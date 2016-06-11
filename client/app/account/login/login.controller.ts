@@ -1,13 +1,10 @@
 'use strict';
 
 class LoginController {
-  constructor(Auth, $state) {
-    this.user = {};
-    this.errors = {};
-    this.submitted = false;
-
-    this.Auth = Auth;
-    this.$state = $state;
+  user = {email:'', password:''};
+  errors = {other:''};
+  submitted = false;
+  constructor(public Auth, public $state) {
   }
 
   login(form) {

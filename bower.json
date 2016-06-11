@@ -17,7 +17,6 @@
     "angular-ui-router": "~0.2.15",
     "angular-validation-match": "~1.5.2",
     "angular-ui-calendar": "latest",
-    "angular-bootstrap-calendar": "^0.20.0",
     "moment": "^2.13.0",
     "angular-animate": "^1.5.6"
   },

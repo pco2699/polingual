@@ -4,17 +4,20 @@
       h1 Profile Register
     .col-sm-12
       //form.form(name='form', ng-submit='prfl.update(form)', novalidiate)
-      form.form(name='form', novalidiate)
+      form.form(name='form', ng-submit='prfl.update()', novalidiate='')
+        .form-group
+          label City
+          input.form-control(type='text', name='city', ng-model='prfl.user.city')
         .form-group
           label Language
-          select.form-control(name='lang', ng-model='test', ng-options='lang.value as lang.name for lang in prfl.langs')
+          select.form-control(name='lang', ng-model='prfl.user.lang', ng-options='lang.value as lang.name for lang in prfl.langs')
+        .form-group
+          label Gender
+          select.form-control(name='Gender', ng-model='prfl.user.gender', ng-options='gen_item for gen_item in prfl.gender')
+        button.btn(type='submit') Register
 //      .form-group
 //	  label Full Name
 //	  input.form-control(type='text', name='full_name', ng-model='prfl.user.fullname')
-        .form-group
-          label Language
-          select.form-control(name='lang')
-            //option(ng:repeat='lang_item in prfl.langs')
 //	.form-group
 //	  label Country
 //	  select.form-control(name='country', ng-model='prfl.user.country')
