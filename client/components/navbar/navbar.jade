@@ -19,6 +19,18 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
         li(ng-show='nav.isAdmin()', ui-sref-active='active')
           a(ui-sref='admin') Admin
 
+      form.form(name='form')
+        ul.nav.navbar-nav
+          li
+             .form-group
+               label City
+               input.form-control(type='text', name='city')
+
+          li 
+             .form-group
+               label Gender
+               select.form-control(name='gend', ng-model='gend', ng-options='gend.value as gend.name for gend in nav.genders')   
+
       ul.nav.navbar-nav.navbar-right
         li(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
           a(ui-sref='signup') Sign up
