@@ -17,8 +17,15 @@ function UserResource($resource) {
       params: {
         id: 'me'
       }
+    },
+    registerProfile: {
+      method: 'PUT',
+      params: {
+        controller: 'profile'
+      }
     }
-  });
+  }
+);
 }
 
 angular.module('polingualApp.auth')

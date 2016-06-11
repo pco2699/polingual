@@ -4,7 +4,6 @@ angular.module('polingualApp', [
   'polingualApp.auth',
   'polingualApp.admin',
   'polingualApp.constants',
-  'mwl.calendar',
   'ngCookies',
   'ngResource',
   'ngSanitize',

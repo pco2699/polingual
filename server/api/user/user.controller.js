@@ -100,6 +100,28 @@ export function changePassword(req, res, next) {
 }
 
 /**
+ * Register Profile
+ */
+export function registerProfile(req, res, next) {
+  let userId = req.user._id;
+  let city = String(req.body.city);
+  let gender = String(req.body.gender);
+  let lang = String(req.body.lang);
+
+  return User.findById(userId).exec()
+    .then(user => {
+      user.city = city;
+      user.gender = gender;
+      user.language = lang;
+      return user.save()
+        .then(() => {
+          res.status(204).end();
+        })
+        .catch(validationError(res));
+    });
+}
+
+/**
  * Get my info
  */
 export function me(req, res, next) {
