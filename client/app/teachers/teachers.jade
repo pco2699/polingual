@@ -1,1 +1,6 @@
-div This is the teachers view.
+.container
+  .row
+    ul.col-md-3(ng-repeat='teacher in $ctrl.teachers, ui-sref-active='active')
+      .col-md-12
+        .p teacher.name
+        .p teacher.gender

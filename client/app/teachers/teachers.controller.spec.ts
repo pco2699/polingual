@@ -3,7 +3,7 @@
 describe('Component: TeachersComponent', function () {
 
   // load the controller's module
-  beforeEach(module('testAppApp'));
+  beforeEach(module('polingualApp'));
 
   var TeachersComponent, scope;
 
