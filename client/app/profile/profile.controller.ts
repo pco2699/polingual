@@ -5,6 +5,9 @@ class ProfileComponent {
   public langs = [{name:'Japanese', value:'Japanese'},
                   {name:'English', value:'English'},
                   {name:'Duck',value:'Duck'}];
+  public tags = [{text: 'Unko1'},
+                 {text: 'Unko2'},
+                 {text: 'Unko3'}];
   public message;
   public user;
   public gender;
@@ -13,8 +16,6 @@ class ProfileComponent {
   }
 
   $onInit(){
-    console.log(this.gender);
-    console.log(this.appConfig);
     this.gender = this.appConfig.gender;
   }
 
