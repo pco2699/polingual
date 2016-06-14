@@ -7,6 +7,7 @@ angular.module('polingualApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'ngTagsInput',
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
