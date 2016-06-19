@@ -13,7 +13,7 @@ class NavbarController {
   public langs =  [{name:'Japanese', value:'Japanese'},
 	           {name:'English', value:'English'},
                    {name:'Duck',value:'Duck'}];
-  
+
   //public genders;
   //public langs;
 
@@ -30,13 +30,15 @@ class NavbarController {
     ];
   }
 
-  function isCurState(target) {
-	if('main'==target){
-		return true;
-	}else{
-		return false;
-	}
+  isCurState(target) {
+    if('main' == target){
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
+
 angular.module('polingualApp')
   .controller('NavbarController', NavbarController);

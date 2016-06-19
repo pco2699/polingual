@@ -15,12 +15,15 @@ class ProfileComponent {
   constructor(public $http, public Auth, public $state, public appConfig) {
   }
 
+  loadItems(query){
+      return this.$http.get('/api/interests/' + query);
+  }
+  
   $onInit(){
     this.gender = this.appConfig.gender;
   }
 
   update(){
-    console.log(this.user.city + this.user.lang + this.user.gender)
     this.Auth.registerProfile(this.user.city, this.user.lang, this.user.gender)
       .then(() => {
         this.message = 'Success!'

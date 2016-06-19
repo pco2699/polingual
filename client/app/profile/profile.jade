@@ -17,6 +17,7 @@
         .form-group
           label Interest
           tags-input(ng-model="prfl.tags")
+            auto-complete(source="prfl.loadItems($query)")
         button.btn(type='submit') Register
 //      .form-group
 //	  label Full Name
