@@ -13,9 +13,6 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
         li(ng-repeat='item in nav.menu', ui-sref-active='active')
           a(ui-sref='{{item.state}}') {{item.title}}
 
-        li(ng-if='nav.isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='member') Member
-
         li(ng-show='nav.isAdmin()', ui-sref-active='active')
           a(ui-sref='admin') Admin
 

@@ -5,6 +5,7 @@ angular.module('polingualApp')
     $stateProvider
       .state('profile', {
         url: '/profile',
-        template: '<profile></profile>'
+        template: '<profile></profile>',
+        authenticate: true
       });
   });

@@ -21,6 +21,8 @@
         "client/app/main/main.ts",
         "client/app/profile/profile.controller.ts",
         "client/app/profile/profile.ts",
+        "client/app/teacherdetail/teacherdetail.controller.ts",
+        "client/app/teacherdetail/teacherdetail.ts",
         "client/app/teachers/teachers.controller.ts",
         "client/app/teachers/teachers.ts",
         "client/components/auth/auth.module.ts",

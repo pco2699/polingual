@@ -16,20 +16,22 @@ class ProfileComponent {
   }
 
   loadItems(query){
-      return this.$http.get('/api/interests/' + query);
+    return this.$http.get('/api/interests/' + query);
   }
-  
+
   $onInit(){
     this.gender = this.appConfig.gender;
   }
 
   update(){
-    this.Auth.registerProfile(this.user.city, this.user.lang, this.user.gender)
-      .then(() => {
-        this.message = 'Success!'
-        this.$state.go('main');
-      }
-    )
+    this.$http.post('/api/interests', this.tags)
+      .then(
+        this.Auth.registerProfile(this.user.city, this.user.lang, this.user.gender)
+          .then(() => {
+            this.$state.go('main');
+          }
+        )
+      )
   }
 }
 
