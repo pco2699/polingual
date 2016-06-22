@@ -1,6 +1,11 @@
 .container
   .row
-    ul.col-md-3(ng-repeat='teacher in $ctrl.teachers', ui-sref-active='active')
-      .col-md-12
-        .p teacher.name
-        .p teacher.gender
+    ul
+     li.col-md-3.col-xs-12.tbox(ng-repeat='teacher in $ctrl.teachers')  
+        ul
+          li {{teacher.name}}
+          li {{teacher.gender}}
+          li {{teacher.country}}
+          li {{teacher.language}}
+          li testtesttesttesttest
+          li testtesttesttesttest

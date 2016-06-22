@@ -3,28 +3,25 @@
 
 class TeachersComponent {
 
-  public teachers = [];	
+  public teachers = [{name:'Scott',gender:'Male',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
+                {name:'takayama',gender:'Other',country:'Japan',language:'Japanese'}];
 
   constructor() {
-    this.message = 'Hello';
-    var teacher1 = new Teacher('name1','gender1');
-    var teacher2 = new Teacher('name2','gender2');
-    var teacher3 = new Teacher('name3','gender3');
-    teachers.push(teacher1);
-    teachers.push(teacher2);
-    teachers.push(teacher3);
   }
-}
-
-class Teacher {
-   
-   public name;
-   public gender;
-
-   constructor(name, gender) {
-	   this.name = name;
-	   this.gender = gender;
-   }
 }
 
 angular.module('polingualApp')

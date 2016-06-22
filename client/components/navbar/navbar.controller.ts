@@ -27,15 +27,6 @@ class NavbarController {
     }
     ];
   }
-  
-  isCurState(target) {
-    if('main' == target){
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
 }
 
 angular.module('polingualApp')

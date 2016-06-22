@@ -1,0 +1,7 @@
+.tbox {
+  margin: 3px 5px 3px 5px;
+  border: 3px black solid;
+  border-radius: 10px;        /* CSS3草案 */  
+  -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+  -moz-border-radius: 10px;   /* Firefox用 */
+}
