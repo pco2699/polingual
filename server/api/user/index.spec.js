@@ -94,6 +94,16 @@ describe('User API Router:', function() {
 
   });
 
+  describe('GET /api/users/bylang/:language', function() {
+
+    it('should route to user.controller.getUsersByLang', function() {
+      routerStub.get
+        .withArgs('/:language', 'userCtrl.getUsersByLang')
+        .should.have.been.calledOnce;
+    });
+
+  });
+
   describe('POST /api/users', function() {
 
     it('should route to user.controller.create', function() {

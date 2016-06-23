@@ -3,24 +3,26 @@
 
 class TeachersComponent {
 
-  public teachers = [{name:'Scott',gender:'Male',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-	           {name:'Merry',gender:'Female',country:'Japan',language:'Japanese'},
-                {name:'takayama',gender:'Other',country:'Japan',language:'Japanese'}];
+  public teachers = [{name: 'Scott', gender: 'Male', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
+    {name: 'takayama', gender: 'Other', country: 'Japan', language: 'Japanese'}];
 
-  constructor() {
+  constructor($scope, $stateParams, teachers) {
+	  $scope.$parent.lang = $stateParams.lang;
+	  this.teachers = teachers;
   }
 }
 

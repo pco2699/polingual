@@ -143,3 +143,20 @@ export function me(req, res, next) {
 export function authCallback(req, res, next) {
   res.redirect('/');
 }
+
+/**
+ * Get multiple users by him/her language
+ */
+export function getUsersByLang(req, res, next) {
+  var lang = req.params.language;
+  return User.find({_language:lang}).exec()
+    .then(user => {
+      if (!user) {
+         return res.status(404).end();
+      }
+      res.json(user);
+    })
+   .catch(err => next(err));
+}
+
+

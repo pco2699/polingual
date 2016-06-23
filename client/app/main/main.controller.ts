@@ -6,10 +6,12 @@ class MainController {
 
   public langs;
 
-  constructor($http, $scope, socket, public appConfig) {
+  constructor($http, $scope, socket, $state, public appConfig) {
     this.$http = $http;
     this.socket = socket;
     this.awesomeThings = [];
+
+    this.submit = function(lang){ $state.go('teachers', {lang:lang}) };
 
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');
