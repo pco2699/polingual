@@ -16,25 +16,25 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
         li(ng-show='nav.isAdmin()', ui-sref-active='active')
           a(ui-sref='admin') Admin
 
-      form.navbar-form.navbar-left(role='Searcha', ng-submit='nav.submit(country,gend,lang,intr)')
+      form.navbar-form.navbar-left.form-inline(role='Searcha', ng-submit='nav.submit(country,gend,lang,intr)')
           .form-group.navinput
-             label Country
-             input.form-control(type='text', name='country')
+             label.control-label Country
+             input.form-control(type='text', name='country', size='10')
 
           .form-group.navinput
-             label Gender
-             select.form-control(name='gend', ng-model='gend', ng-options='gend.value as gend.name for gend in nav.genders')   
+             label.control-label Gender
+             select.form-control.input-sm(name='gend', ng-model='gend', ng-options='gend_item for gend_item in nav.genders')   
 
           .form-group.navinput(ng-show='isCurState("main")')
-             label Languege
-             select.form-control(name='lang', ng-model='lang', ng-options='lang.value as lang.name for lang in nav.langs')
+             label.control-label Language
+             select.form-control.input-sm(name='lang', ng-model='lang', ng-options='lang_item for lang_item in nav.langs')
 
           .form-group.navinput
-             label Interest
-             input.form-control(type='text', name='intr')
+             label.control-label Interest
+             input.form-control.input-sm(type='text', name='intr', size='10')
 
           .form-group.navinput
-             button.btn-success search
+             button.btn.btn-success search
 
       ul.nav.navbar-nav.navbar-right
         li(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
