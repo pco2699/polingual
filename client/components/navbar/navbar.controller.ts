@@ -8,7 +8,7 @@ class NavbarController {
 
   public genders = [];
   public langs =  [];
-  
+
   public isLoggedIn;
   public isAdmin;
   public getCurrentUser;
@@ -26,7 +26,7 @@ class NavbarController {
   }
 
   $onInit(){
-     this.gender = this.appConfig.gender;
+     this.genders = this.appConfig.gender;
      this.langs = this.appConfig.langs;
   }
 
