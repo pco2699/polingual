@@ -20,9 +20,11 @@ class TeachersComponent {
     {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
     {name: 'takayama', gender: 'Other', country: 'Japan', language: 'Japanese'}];
 
-  constructor($scope, $stateParams, teachers) {
+  public testy;
+
+  constructor($scope, $stateParams) {
 	  $scope.$parent.lang = $stateParams.lang;
-	  this.teachers = teachers;
+	  this.testy = $stateParams.lang;
   }
 }
 
