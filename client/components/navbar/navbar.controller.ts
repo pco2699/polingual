@@ -13,11 +13,12 @@ class NavbarController {
   public langs =  [{name:'Japanese', value:'Japanese'},
 	           {name:'English', value:'English'},
                    {name:'Duck',value:'Duck'}];
-  //public genders;
-  //public langs;
+  public isLoggedIn;
+  public isAdmin;
+  public getCurrentUser;
+  public menu;
 
-  constructor(Auth, public appConfig) {
-
+  constructor(public Auth, public appConfig) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
