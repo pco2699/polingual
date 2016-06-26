@@ -12,9 +12,9 @@ class NavbarController {
 
   public langs =  [{name:'Japanese', value:'Japanese'},
 	           {name:'English', value:'English'},
-                   {name:'Duck',value:'Duck'}];
-  //public genders;
-  //public langs;
+                   {name:'Duck',value:'Duck'}]; 
+  public genders;
+  public langs;
 
   constructor(Auth, public appConfig) {
 
@@ -27,6 +27,12 @@ class NavbarController {
     }
     ];
   }
+  
+  $onInit(){
+     this.gender = this.appConfig.gender;
+     this.langs = this.appConfig.langs;
+  }
+
 }
 
 angular.module('polingualApp')
