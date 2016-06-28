@@ -16,7 +16,7 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
         li(ng-show='nav.isAdmin()', ui-sref-active='active')
           a(ui-sref='admin') Admin
 
-      form.navbar-form.navbar-left.form-inline(role='Searcha', ng-submit='nav.submit(country,gend,lang,intr)')
+      form.navbar-form.navbar-left.form-inline(ng-show='$root.dispSearch' role='Searcha', ng-submit='nav.submit(country,gend,lang,intr)')
           .form-group.navinput
              label.control-label Country
              input.form-control(type='text', name='country', size='10')

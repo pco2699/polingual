@@ -13,8 +13,9 @@ class NavbarController {
   public isAdmin;
   public getCurrentUser;
   public menu;
+  public dispSearch;
 
-  constructor(public Auth, public appConfig, public $stateParams) {
+  constructor(public Auth, public appConfig, public $stateParams, public $rootScope, public $scope) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -23,14 +24,14 @@ class NavbarController {
       'state': 'main',
     }
     ];
+    NavbarController.$inject = ['Auth', 'appConfig', '$stateParams', '$rootScope', '$scope'];
   }
 
   $onInit(){
-    console.log(this.$stateParams);
     this.genders = this.appConfig.gender;
     this.langs = this.appConfig.langs;
+    this.dispSearch = this.$rootScope.dispSearch;
   }
-
 }
 
 angular.module('polingualApp')
