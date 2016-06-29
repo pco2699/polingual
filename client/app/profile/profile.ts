@@ -6,6 +6,7 @@ angular.module('polingualApp')
       .state('profile', {
         url: '/profile',
         template: '<profile></profile>',
-        authenticate: true
+        authenticate: true,
+        dispSearch: false
       });
   });

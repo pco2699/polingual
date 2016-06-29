@@ -6,18 +6,16 @@ class NavbarController {
   isCollapsed = true;
   //end-non-standard
 
-  public genders = [{name:'Male',value:'Male'},
-              {name:'Female',value:'Female'},
-              {name:'Other',value:'Other'}];
-
-  public langs =  [{name:'Japanese', value:'Japanese'},
-	           {name:'English', value:'English'},
-                   {name:'Duck',value:'Duck'}]; 
   public genders;
   public langs;
 
-  constructor(Auth, public appConfig) {
+  public isLoggedIn;
+  public isAdmin;
+  public getCurrentUser;
+  public menu;
+  public dispSearch;
 
+  constructor(public Auth, public appConfig, public $stateParams, public $rootScope, public $scope) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -26,13 +24,14 @@ class NavbarController {
       'state': 'main',
     }
     ];
-  }
-  
-  $onInit(){
-     this.gender = this.appConfig.gender;
-     this.langs = this.appConfig.langs;
+    NavbarController.$inject = ['Auth', 'appConfig', '$stateParams', '$rootScope', '$scope'];
   }
 
+  $onInit(){
+    this.genders = this.appConfig.gender;
+    this.langs = this.appConfig.langs;
+    this.dispSearch = this.$rootScope.dispSearch;
+  }
 }
 
 angular.module('polingualApp')

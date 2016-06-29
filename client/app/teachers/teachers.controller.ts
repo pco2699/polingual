@@ -41,7 +41,7 @@ class TeachersComponent {
 	   this.tlang = this.$stateParams.lang;
 	   var result = this.$http.get('/api/users/bylang/' + this.tlang,{isArray:true});
            console.log(this.tlang);
-           console.log(result);
+           console.log(result.$promise);
 	   result.$promise.then(function(result){
               this.teachers = result;
 	   });

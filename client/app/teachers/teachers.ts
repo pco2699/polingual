@@ -4,7 +4,7 @@ angular.module('polingualApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('teachers', {
-        url: '/teachers/:lang',
+        url: '/teachers',
 	resolve: {
                   teachers: function($stateParams, public $http){
 		  var tlang = $stateParams.lang;
@@ -13,6 +13,7 @@ angular.module('polingualApp')
 		  return result;
 		}
 	},
-        template: '<teachers></teachers>'
+        template: '<teachers></teachers>',
+        dispSearch: true
       });
   });

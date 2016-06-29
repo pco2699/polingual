@@ -16,8 +16,9 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
         li(ng-show='nav.isAdmin()', ui-sref-active='active')
           a(ui-sref='admin') Admin
 
-      form.navbar-form.navbar-left(role='Searcha', ng-submit='nav.submit(country,gend,lang,intr)')
+      form.navbar-form.navbar-left.form-inline(ng-show='$root.dispSearch' role='Searcha', ng-submit='nav.submit(country,gend,lang,intr)')
           .form-group.navinput
+<<<<<<< HEAD
              label.sr-only  Country
              input.form-control(type='text', name='country', placeholder='Country')
 
@@ -32,16 +33,32 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
           .form-group.navinput
              label.sr-only Interest
              input.form-control(type='text', name='intr', placeholder='Interest')
+=======
+             label.control-label Country
+             input.form-control(type='text', name='country', size='10')
 
           .form-group.navinput
-             button.btn-success search
+             label.control-label Gender
+             select.form-control.input-sm(name='gend', ng-model='gend', ng-options='gend_item for gend_item in nav.genders')   
+
+          .form-group.navinput(ng-show='isCurState("main")')
+             label.control-label Language
+             select.form-control.input-sm(name='lang', ng-model='lang', ng-options='lang_item for lang_item in nav.langs')
+
+          .form-group.navinput
+             label.control-label Interest
+             input.form-control.input-sm(type='text', name='intr', size='10')
+>>>>>>> 7f3cab70cbf9d21fbd2d5251d0dcbe32469d19b4
+
+          .form-group.navinput
+             button.btn.btn-success search
 
       ul.nav.navbar-nav.navbar-right
         li(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='signup') Sign up
+          oauth-buttons
 
-        li(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='login') Login
+        //li(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
+        //  a(ui-sref='login') Login
 
         li(ng-show='nav.isLoggedIn()')
           p.navbar-text Hello {{ nav.getCurrentUser().name }}

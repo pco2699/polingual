@@ -5,6 +5,7 @@ angular.module('polingualApp')
     $stateProvider
       .state('main', {
         url: '/',
-        template: '<main></main>'
+        template: '<main></main>',
+        dispSearch: false
       });
-  });
+   })
