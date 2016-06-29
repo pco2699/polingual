@@ -39,10 +39,11 @@ class TeachersComponent {
   $onInit() {
 	   this.$scope.$parent.lang = this.$stateParams.lang;
 	   this.tlang = this.$stateParams.lang;
+           console.log(this.tlang);
 	   var result = this.$http.get('/api/users/bylang/' + this.tlang,{isArray:true});
            console.log(this.tlang);
-           console.log(result.$promise);
-	   result.$promise.then(function(result){
+           console.log(result);
+	   result.then(function(result){
               this.teachers = result;
 	   });
            console.log(this.teachers);

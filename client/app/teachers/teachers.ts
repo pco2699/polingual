@@ -9,7 +9,7 @@ angular.module('polingualApp')
                   teachers: function($stateParams, public $http){
 		  var tlang = $stateParams.lang;
 		  var result = $http.get('/api/users/bylang/' + tlang,{isArray:true});
-		  console.log(result);
+		  console.log(tlang);
 		  return result;
 		}
 	},
