@@ -18,20 +18,20 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
 
       form.navbar-form.navbar-left(role='Searcha', ng-submit='nav.submit(country,gend,lang,intr)')
           .form-group.navinput
-             label Country
-             input.form-control(type='text', name='country')
+             label.sr-only  Country
+             input.form-control(type='text', name='country', placeholder='Country')
 
           .form-group.navinput
-             label Gender
-             select.form-control(name='gend', ng-model='gend', ng-options='gend.value as gend.name for gend in nav.genders')   
+             label.sr-only Gender
+             select(title='Gender').form-control(name='gend', ng-model='gend', ng-options='gend.value as gend.name for gend in nav.genders')
 
           .form-group.navinput(ng-show='isCurState("main")')
-             label Languege
-             select.form-control(name='lang', ng-model='lang', ng-options='lang.value as lang.name for lang in nav.langs')
+             label.sr-only Languege
+             select.form-control(name='lang', ng-model='lang', ng-options='lang.value as lang.name for lang in nav.langs', placeholder='Language')
 
           .form-group.navinput
-             label Interest
-             input.form-control(type='text', name='intr')
+             label.sr-only Interest
+             input.form-control(type='text', name='intr', placeholder='Interest')
 
           .form-group.navinput
              button.btn-success search

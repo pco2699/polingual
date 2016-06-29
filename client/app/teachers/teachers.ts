@@ -6,9 +6,11 @@ angular.module('polingualApp')
       .state('teachers', {
         url: '/teachers/:lang',
 	resolve: {
-		teachers: function($stateParams, $http){
-		  var lang = $stateParams.lang
-		  return $http.get('/api/users/bylang/' + lang);
+                  teachers: function($stateParams, public $http){
+		  var tlang = $stateParams.lang;
+		  var result = $http.get('/api/users/bylang/' + tlang,{isArray:true});
+		  console.log(result);
+		  return result;
 		}
 	},
         template: '<teachers></teachers>'

@@ -8,7 +8,8 @@ var userCtrlStub = {
   me: 'userCtrl.me',
   changePassword: 'userCtrl.changePassword',
   show: 'userCtrl.show',
-  create: 'userCtrl.create'
+  create: 'userCtrl.create',
+  getUsersByLang: 'userCtrl.getUsersByLang'
 };
 
 var authServiceStub = {

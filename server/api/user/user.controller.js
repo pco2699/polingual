@@ -149,12 +149,13 @@ export function authCallback(req, res, next) {
  */
 export function getUsersByLang(req, res, next) {
   var lang = req.params.language;
-  return User.find({_language:lang}).exec()
-    .then(user => {
-      if (!user) {
+
+  return User.find({language:lang}).exec()
+    .then(users => {
+      if (!users) {
          return res.status(404).end();
       }
-      res.json(user);
+      res.json(users);
     })
    .catch(err => next(err));
 }

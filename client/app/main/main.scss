@@ -8,7 +8,6 @@
   //min-height: 350px;
 }
 
-
 #banner:before {
   content: "";
   z-index:-1;
@@ -23,7 +22,7 @@
 }
 
 #banner h1 {
- font-size: 8em;
+ font-size: 4.8em;
 }
 
 #banner h2 {
@@ -35,12 +34,12 @@
   position:relative;
   label {
 	  color: #FFFFFF;
-	  font-size: 1.5em;
+	  font-size: 1.8em;
   }	  
   button {
     position: absolute;
     right : 3px;
-    margin-top: 5px;
+    margin-top: 8px;
     padding: 2px 5px 2px 5px;
     font-size: 1.5em;
  }
@@ -66,7 +65,17 @@
 }
 
 .procimg{
-	margin: 3px 3px 3px 3px;
-	padding: 3px 3px 3px 3px;
+	width: 180px;
+	height: 155px;
+
 }
+
+.flowdiv{
+	background-color: rgba(70,70,70,20);
+	color: #FFFFFF;
+	margin-top: 15px;
+	padding-top: 5px;
+	padding-bottom: 30px;
+}
+
 
