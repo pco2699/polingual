@@ -25,28 +25,13 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
              label.sr-only Gender
              select(title='Gender').form-control(name='gend', ng-model='gend', ng-options='gend.value as gend.name for gend in nav.genders')
 
-          .form-group.navinput(ng-show='isCurState("main")')
-             label.sr-only Languege
+          .form-group.navinput
+             label.sr-only Language
              select.form-control(name='lang', ng-model='lang', ng-options='lang.value as lang.name for lang in nav.langs', placeholder='Language')
 
           .form-group.navinput
              label.sr-only Interest
              input.form-control(type='text', name='intr', placeholder='Interest')
-=======
-             label.control-label Country
-             input.form-control(type='text', name='country', size='10')
-
-          .form-group.navinput
-             label.control-label Gender
-             select.form-control.input-sm(name='gend', ng-model='gend', ng-options='gend_item for gend_item in nav.genders')   
-
-          .form-group.navinput(ng-show='isCurState("main")')
-             label.control-label Language
-             select.form-control.input-sm(name='lang', ng-model='lang', ng-options='lang_item for lang_item in nav.langs')
-
-          .form-group.navinput
-             label.control-label Interest
-             input.form-control.input-sm(type='text', name='intr', size='10')
 
           .form-group.navinput
              button.btn.btn-success search
@@ -54,9 +39,6 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
       ul.nav.navbar-nav.navbar-right
         li(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
           oauth-buttons
-
-        //li(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
-        //  a(ui-sref='login') Login
 
         li(ng-show='nav.isLoggedIn()')
           p.navbar-text Hello {{ nav.getCurrentUser().name }}
