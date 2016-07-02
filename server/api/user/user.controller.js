@@ -103,14 +103,14 @@ export function changePassword(req, res, next) {
  * Register Profile
  */
 export function registerProfile(req, res, next) {
-  let userId = req.user._id;
-  let city = String(req.body.city);
-  let gender = String(req.body.gender);
-  let lang = String(req.body.lang);
+  const userId = req.user._id;
+  const country = String(req.body.country);
+  const gender = String(req.body.gender);
+  const lang = String(req.body.lang);
 
   return User.findById(userId).exec()
     .then(user => {
-      user.city = city;
+      user.country = country;
       user.gender = gender;
       user.language = lang;
       return user.save()

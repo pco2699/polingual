@@ -1,12 +1,13 @@
 'use strict';
-(function(){
+(function() {
 
-class TeachersComponent {
+  class TeachersComponent {
 
-  public teachers = [];
+    public teachers = [];
+    public tlang;
 
-  constructor(public $scope, public $stateParams, public $http) {
-  }
+    constructor(public $scope, public $stateParams, public $http) {
+    }
 
   $onInit() {
 	   var tlang = this.$stateParams.lang;
@@ -28,12 +29,11 @@ class TeachersComponent {
               this.teachers = teachers;
 	   });
   }
-}
 
-angular.module('polingualApp')
-  .component('teachers', {
-    templateUrl: 'app/teachers/teachers.html',
-    controller: TeachersComponent
-  });
+  angular.module('polingualApp')
+    .component('teachers', {
+      templateUrl: 'app/teachers/teachers.html',
+      controller: TeachersComponent
+    });
 
 })();
