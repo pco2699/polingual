@@ -15,7 +15,7 @@ class NavbarController {
   public menu;
   public dispSearch;
 
-  constructor(public Auth, public appConfig, public $stateParams, public $rootScope, public $scope) {
+  constructor(public Auth, public appConfig, public $stateParams, public $rootScope, public $scope, public $state) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -24,7 +24,10 @@ class NavbarController {
       'state': 'main',
     }
     ];
-    NavbarController.$inject = ['Auth', 'appConfig', '$stateParams', '$rootScope', '$scope'];
+    NavbarController.$inject = ['Auth', 'appConfig', '$stateParams', '$rootScope', '$scope', '$state'];
+    this.submit = function(count, gend, lang, intr){
+	              $state.go('teachers', {count:count ,gend:gend ,lang:lang, intr:intr})
+     };
   }
 
   $onInit(){

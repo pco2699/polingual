@@ -3,36 +3,28 @@
 
 class TeachersComponent {
 
-  /*public teachers = [{name: 'Scott', gender: 'Male', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'Merry', gender: 'Female', country: 'Japan', language: 'Japanese'},
-    {name: 'takayama', gender: 'Other', country: 'Japan', language: 'Japanese'}];*/
-
   public teachers = [];
-  public tlang;
 
   constructor(public $scope, public $stateParams, public $http) {
   }
 
   $onInit() {
-	   this.$scope.$parent.lang = this.$stateParams.lang;
-	   this.tlang = this.$stateParams.lang;
-	   this.$http.get('/api/users/bylang/' + this.tlang,{isArray:true})
+	   var tlang = this.$stateParams.lang;
+	   var tcount = this.$stateParams.count;
+	   var tintr = this.$stateParams.intr;
+	   var tgend = this.$stateParams.gend;
+	   var params = [tlang, tcount, tgend, tintr];
+	   for (let param of params){
+		   console.log(param);
+		   if (param == null || typeof param === 'undefined'){
+			   param = 'NA';
+		           console.log(param);
+		   }
+	   }
+	   console.log(params.join('/'));
+	   this.$http.get('/api/users/byall/' + params.join('/') ,{isArray:true})
 	   .then(result => {
               var teachers = result.data;
-	      console.log(teachers);
               this.teachers = teachers;
 	   });
   }

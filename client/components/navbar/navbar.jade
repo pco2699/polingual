@@ -16,22 +16,24 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
         li(ng-show='nav.isAdmin()', ui-sref-active='active')
           a(ui-sref='admin') Admin
 
-      form.navbar-form.navbar-left.form-inline(ng-show='$root.dispSearch' role='Searcha', ng-submit='nav.submit(country,gend,lang,intr)')
+      form.navbar-form.navbar-left.form-inline(ng-show='$root.dispSearch' role='Searcha', ng-submit='nav.submit(count, gend, lang, intr)')
           .form-group.navinput
              label.sr-only  Country
-             input.form-control(type='text', name='country', placeholder='Country')
+             input.form-control(type='text', name='count', ng-model='count', placeholder='Country')
 
           .form-group.navinput
              label.sr-only Gender
-             select(title='Gender').form-control(name='gend', ng-model='gend', ng-options='gend.value as gend.name for gend in nav.genders')
+             select(title='Gender').form-control(name='gend', ng-model='gend', ng-options='gend as gend for gend in nav.genders')
+               option(value='', disabled='disabled', selected='selected') Gender
 
           .form-group.navinput
              label.sr-only Language
-             select.form-control(name='lang', ng-model='lang', ng-options='lang.value as lang.name for lang in nav.langs', placeholder='Language')
+             select(title='Language').form-control(name='lang', ng-model='lang', ng-options='lang as lang for lang in nav.langs', placeholder='Language')
+               option(value='', disabled='disabled', selected='selected') Language
 
           .form-group.navinput
              label.sr-only Interest
-             input.form-control(type='text', name='intr', placeholder='Interest')
+             input.form-control(type='text', name='intr', ng-model='intr', placeholder='Interest')
 
           .form-group.navinput
              button.btn.btn-success search

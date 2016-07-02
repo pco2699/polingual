@@ -3,7 +3,7 @@
 
 angular.module('polingualApp.constants', [])
 
-.constant('appConfig', {userRoles:['guest','user','admin'],gender:['Male','Female','Other'],langs:['English','Japanese','Spanish']})
+.constant('appConfig', {userRoles:['guest','user','admin'],gender:['','Male','Female','Other'],langs:['','English','Japanese','Spanish']})
 
 ;
 })(angular);

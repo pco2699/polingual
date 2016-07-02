@@ -160,4 +160,24 @@ export function getUsersByLang(req, res, next) {
    .catch(err => next(err));
 }
 
+/**
+ *  * Get multiple users by him/her language, country, gender, interest
+ *   */
+export function getUsersByAll(req, res, next) {
+   var lang = req.params.language;
+   var count = req.params.country;
+   var gend = req.params.gender;
+   var intr = req.params.interest;
+   console.log('shintani user controller');
+   console.log(lang);
+
+   return User.find({language:lang}).exec()
+    .then(users => {
+       if (!users) {
+            return res.status(404).end();
+        }
+       res.json(users);
+    })
+    .catch(err => next(err));
+}
 

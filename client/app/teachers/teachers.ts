@@ -4,16 +4,7 @@ angular.module('polingualApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('teachers', {
-        url: '/teachers/:lang',
-	resolve: {
-                  teacherstest: function($stateParams, public $http){
-		  var tlang = $stateParams.lang;
-		  var result = $http.get('/api/users/bylang/' + tlang,{isArray:true});
-		  return result.then(function(result){
-			  var temp = result.data;
-			  return temp; });
-		}
-	},
+        url: '/teachers/:lang/:count/:gend:/:intr',
         template: '<teachers></teachers>',
         dispSearch: true
       });

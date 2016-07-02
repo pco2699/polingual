@@ -13,6 +13,7 @@ router.put('/:id/password', auth.isAuthenticated(), controller.changePassword);
 router.put('/:id/profile', auth.isAuthenticated(), controller.registerProfile);
 router.get('/:id', auth.isAuthenticated(), controller.show);
 router.get('/bylang/:language', controller.getUsersByLang);
+router.get('/byall/:language/:country/:gender/:interest', controller.getUsersByAll);
 router.post('/', controller.create);
 
 module.exports = router;
