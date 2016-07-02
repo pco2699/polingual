@@ -24,7 +24,7 @@ class ProfileComponent {
   update(){
     this.$http.post('/api/interests', this.tags)
       .then(
-        this.Auth.registerProfile(this.user.city, this.user.lang, this.user.gender)
+        this.Auth.registerProfile(this.user.city, this.user.langs, this.user.gender)
           .then(() => {
             this.$state.go('main');
           }

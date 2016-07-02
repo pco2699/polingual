@@ -22,7 +22,6 @@ angular.module('polingualApp', [
   })
   .run(function ($rootScope, $state){
     $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams){
-      console.log(toState.dispSearch);
       if(!toState.dispSearch){
         $rootScope.dispSearch = false;
       }
