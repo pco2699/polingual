@@ -23,20 +23,18 @@ class TeachersComponent {
   public teachers = [];
   public tlang;
 
-  constructor(public $scope, public $stateParams, public $http, public teacherstest) {
+  constructor(public $scope, public $stateParams, public $http) {
   }
 
   $onInit() {
 	   this.$scope.$parent.lang = this.$stateParams.lang;
 	   this.tlang = this.$stateParams.lang;
-	   var result = this.$http.get('/api/users/bylang/' + this.tlang,{isArray:true});
-	   this.teachers = result.then(function(result){
+	   this.$http.get('/api/users/bylang/' + this.tlang,{isArray:true})
+	   .then(result => {
               var teachers = result.data;
 	      console.log(teachers);
-              return teachers;
+              this.teachers = teachers;
 	   });
-	   console.log(teacherstest);
-	   console.log(this.teacherstest);
   }
 }
 
