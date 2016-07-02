@@ -9,7 +9,9 @@ angular.module('polingualApp')
                   teacherstest: function($stateParams, public $http){
 		  var tlang = $stateParams.lang;
 		  var result = $http.get('/api/users/bylang/' + tlang,{isArray:true});
-		  return result;
+		  return result.then(function(result){
+			  var temp = result.data;
+			  return temp; });
 		}
 	},
         template: '<teachers></teachers>',

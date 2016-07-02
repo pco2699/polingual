@@ -23,7 +23,7 @@ class TeachersComponent {
   public teachers = [];
   public tlang;
 
-  constructor(public $scope, public $stateParams, public $http) {
+  constructor(public $scope, public $stateParams, public $http, public teacherstest) {
   }
 
   $onInit() {
@@ -35,7 +35,8 @@ class TeachersComponent {
 	      console.log(teachers);
               return teachers;
 	   });
-	   console.log(this.teachers);
+	   console.log(teacherstest);
+	   console.log(this.teacherstest);
   }
 }
 
