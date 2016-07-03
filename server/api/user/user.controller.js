@@ -103,16 +103,19 @@ export function changePassword(req, res, next) {
  * Register Profile
  */
 export function registerProfile(req, res, next) {
-  const userId = req.user._id;
+  const userId = req.params.id;
   const country = String(req.body.country);
   const gender = String(req.body.gender);
-  const lang = String(req.body.lang);
+  const langs = String(req.body.langs);
+  const interests = req.body.interests;
 
   return User.findById(userId).exec()
     .then(user => {
+      console.log(user);
       user.country = country;
       user.gender = gender;
-      user.language = lang;
+      user.language = langs;
+      user.interest = interests;
       return user.save()
         .then(() => {
           res.status(204).end();
