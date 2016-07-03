@@ -10,30 +10,36 @@
     }
 
   $onInit() {
-	   var tlang = this.$stateParams.lang;
-	   var tcount = this.$stateParams.count;
-	   var tintr = this.$stateParams.intr;
-	   var tgend = this.$stateParams.gend;
-	   var params = [tlang, tcount, tgend, tintr];
-	   for (let param of params){
-		   console.log(param);
-		   if (param == null || typeof param === 'undefined'){
-			   param = 'NA';
-		           console.log(param);
-		   }
-	   }
-	   console.log(params.join('/'));
-	   this.$http.get('/api/users/byall/' + params.join('/') ,{isArray:true})
-	   .then(result => {
-              var teachers = result.data;
-              this.teachers = teachers;
-	   });
-  }
+	  var tlang = this.$stateParams.lang;
+	  if (tlang == ''){
+		  tlang = 'NA';
+	  }
+	  var tcount = this.$stateParams.count;
+	  if (tcount == ''){
+		  tcount = 'NA';
+	  }
+	  var tintr = this.$stateParams.intr;
+	  if (tintr == ''){
+		  tintr = 'NA';
+	  }
+	  var tgend = this.$stateParams.gend;
+	  if (tgend == ''){
+		  tgend = 'NA';
+	  }
+	  var params = [tlang, tcount, tgend, tintr];
+	  console.log(params.join('/'));
+	  this.$http.get('/api/users/byall/' + params.join('/') ,{isArray:true})
+	  .then(result => {
+             var teachers = result.data;
+             this.teachers = teachers;
+	  });
+   }
+ }
 
-  angular.module('polingualApp')
-    .component('teachers', {
-      templateUrl: 'app/teachers/teachers.html',
-      controller: TeachersComponent
-    });
+angular.module('polingualApp')
+  .component('teachers', {
+    templateUrl: 'app/teachers/teachers.html',
+    controller: TeachersComponent
+  });
 
 })();
