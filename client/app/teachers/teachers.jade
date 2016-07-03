@@ -1,11 +1,11 @@
 .container
   .row
     ul
-     li.col-md-3.col-xs-12.tbox(ng-repeat='teacher in $ctrl.teachers')  
-        ul
-          li {{teacher.name}}
-          li {{teacher.gender}}
-          li {{teacher.country}}
-          li {{teacher.language}}
-          li testtesttesttesttest
-          li testtesttesttesttest
+     li.col-lg-3.col-md-3.col-sm-4.col-xs-6.tbox(ng-repeat='teacher in $ctrl.teachers')  
+        a(href='test') 
+        .tname {{teacher.name}}
+        .timg 
+            img(src="{{teacher.facebook.picture.data.url}}")
+        .tcount From: {{teacher.country}}
+        .tlang Speak: {{teacher.language}}
+        .rate ★★★★★
