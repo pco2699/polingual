@@ -105,6 +105,16 @@ describe('User API Router:', function() {
 
   });
 
+  describe('GET /api/users/byall/:language/:country/:gender/:interest', function() {
+
+    it('should route to user.controller.getUsersByAll', function() {
+      routerStub.get
+        .withArgs('/:language/:country/:gender/:interest', 'userCtrl.getUsersByAll')
+        .should.have.been.calledOnce;
+    });
+
+  });
+
   describe('POST /api/users', function() {
 
     it('should route to user.controller.create', function() {
