@@ -171,21 +171,22 @@ export function getUsersByAll(req, res, next) {
    var count = req.params.country;
    var gend = req.params.gender;
    var intr = req.params.interest;
-   var qu = 'role:user';
+   var qu = {
+	   role : 'user'
+   };
    if(lang != 'NA'){
-	   qu += ', language:lang';
+	   qu.language = lang;
    }
    if(count != 'NA'){
-	   qu += ', country:count';
+	   qu.country = count;
    }
    if(gend != 'NA'){
-	   qu += ', gender:gend';
+	   qu.gender = gend;
    }
    if(intr != 'NA'){
-	  // qu += 'interest:intr';
    }
    console.log(qu);
-   return User.find({qu}).exec()
+   return User.find(qu).exec()
     .then(users => {
        if (!users) {
             return res.status(404).end();

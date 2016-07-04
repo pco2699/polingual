@@ -5,6 +5,7 @@
 
     public teachers = [];
     public tlang;
+    public test;
 
     constructor(public $scope, public $stateParams, public $http) {
     }
