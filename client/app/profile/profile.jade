@@ -16,6 +16,6 @@
           select.form-control(name='Gender', ng-model='prfl.user.gender', ng-options='gen_item for gen_item in prfl.gender')
         .form-group
           label Interest
-          tags-input(ng-model="prfl.tags")
+          tags-input(ng-model="prfl.interests")
             auto-complete(source="prfl.loadItems($query)")
         button.btn(type='submit') Register

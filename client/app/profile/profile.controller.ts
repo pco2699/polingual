@@ -1,43 +1,49 @@
 'use strict';
-(function(){
+(function() {
 
-class ProfileComponent {
-  public langs = [];
-  public tags = [];
+  class ProfileComponent {
+    public langs = [];
+    public interests = [];
 
-  public message;
-  public user;
-  public gender;
+    public message;
+    public user;
+    public gender;
 
-  constructor(public $http, public Auth, public $state, public appConfig) {
-  }
+    constructor(public $http, public Auth, public $state, public appConfig) {
+    }
 
-  loadItems(query){
-    return this.$http.get('/api/interests/' + query);
-  }
+    loadItems(query) {
+      return this.$http.get('/api/interests/' + query);
+    }
 
-  $onInit(){
-    this.gender = this.appConfig.gender;
-    this.langs = this.appConfig.langs;
-  }
+    $onInit() {
+      this.gender = this.appConfig.gender;
+      this.langs = this.appConfig.langs;
+    }
 
-  update(){
-    this.$http.post('/api/interests', this.tags)
-      .then(
-        this.Auth.registerProfile(this.user.city, this.user.langs, this.user.gender)
-          .then(() => {
-            this.$state.go('main');
-          }
-        )
-      )
-  }
-}
+    update() {
+      this.$http.post('/api/interests', this.interests)
+        .then(() =>{
+          const user1 = this.Auth.getCurrentUser();
+          const data = {
+            country: this.user.country,
+            langs: this.user.langs,
+            gender: this.user.gender,
+            interests: this.interests
+          };
+          this.$http.put('/api/users/' + user1._id + '/profile', data)
+            .then(() => {
+              this.$state.go('main');
+            })
+          });
+        }
+    }
 
-angular.module('polingualApp')
-  .component('profile', {
-    templateUrl: 'app/profile/profile.html',
-    controller: ProfileComponent,
-    controllerAs: 'prfl'
-  });
+  angular.module('polingualApp')
+    .component('profile', {
+      templateUrl: 'app/profile/profile.html',
+      controller: ProfileComponent,
+      controllerAs: 'prfl'
+    });
 
 })();

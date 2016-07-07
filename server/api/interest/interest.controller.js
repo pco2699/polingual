@@ -75,9 +75,17 @@ export function show(req, res) {
 
 // Creates a new Interest in the DB
 export function create(req, res) {
-  return Interest.create(req.body)
-    .then(respondWithResult(res, 201))
-    .catch(handleError(res));
+  return Interest.find({'text': req.body.text}).exec()
+    .then(result => {
+      if(!result){
+        return Interest.create(req.body)
+        .then(respondWithResult(res, 201))
+        .catch(handleError(res));
+      }
+      else{
+        return res.status(200).end();
+      }
+    });
 }
 
 // Updates an existing Interest in the DB
