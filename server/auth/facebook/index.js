@@ -12,9 +12,21 @@ router
     failureRedirect: '/signup',
     session: false
   }))
-  .get('/callback', passport.authenticate('facebook', {
-    failureRedirect: '/signup',
-    session: false
-  }), setTokenCookie);
+  .get('/callback', (req, res, next) => {
+    passport.authenticate('facebook', (err, user, info) => {
+      if(err){
+        return next(err);
+      }
+      req.user = user;
+      setTokenCookie(req, res);
+      console.log(info);
+      if(info == 'registered'){
+        return res.redirect('/');
+      }
+      else{
+        return res.redirect('/profile');
+      }
+    })(req, res, next);
+  });
 
 export default router;

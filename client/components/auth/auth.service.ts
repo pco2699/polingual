@@ -88,18 +88,6 @@ function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
       }).$promise;
     },
 
-    registerProfile(city, lang, gender, callback) {
-      return User.registerProfile({ id: currentUser._id}, {
-        city: city,
-        lang: lang,
-        gender: gender
-      }, function() {
-        return safeCb(callback)(null);
-      }, function(err) {
-        return safeCb(callback)(err);
-      }).$promise;
-    },
-
     /**
      * Gets all available info on a user
      *   (synchronous|asynchronous)

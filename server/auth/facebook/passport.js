@@ -16,7 +16,7 @@ export function setup(User, config) {
     User.findOne({'facebook.id': profile.id}).exec()
       .then(user => {
         if (user) {
-          return done(null, user);
+          return done(null, user, 'registered');
         }
 
         user = new User({
