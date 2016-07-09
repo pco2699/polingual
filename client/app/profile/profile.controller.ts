@@ -10,6 +10,7 @@
     public gender;
 
     public submitted:boolean = false;
+    public succeed:boolean = false;
 
     constructor(public $http, public Auth, public $state, public appConfig) {
     }
@@ -37,7 +38,7 @@
           };
           this.$http.put('/api/users/' + user1._id + '/profile', data)
             .then(() => {
-              this.$state.go('main');
+              this.succeed = true;
             })
           });
         }

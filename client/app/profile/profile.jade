@@ -8,9 +8,9 @@
         "has-error": form.country.$invalid && prfl.submitted}')
           label Country 
           input.form-control(type='text', name='country', ng-model='prfl.user.country'
-           placeholder='United States, Japan, etc', required='')
+           placeholder='United States, Japan, etc', required='', ng-disabled='prfl.succeed')
           p.help-block(ng-show='form.country.$error.required && prfl.submitted')
-            | A country is reqruied
+            | A country is required
         
         .form-group
           label Language
@@ -20,6 +20,8 @@
           select.form-control(name='Gender', ng-model='prfl.user.gender', ng-options='gen_item for gen_item in prfl.gender')
         .form-group
           label Interest
-          tags-input(ng-model="prfl.interests")
+          tags-input(ng-model="prfl.interests", ng-disabled='prfl.succeed')
             auto-complete(source="prfl.loadItems($query)")
-        button.btn(type='submit') Register
+        p.help-block(ng-show='prfl.succeed') Sucessfully registered
+        button.btn(type='submit', ng-hide='prfl.succeed') Register
+        button.btn(ng-show='prfl.succeed' ui-sref='main') Back
