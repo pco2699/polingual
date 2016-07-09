@@ -19,7 +19,6 @@ router
       }
       req.user = user;
       setTokenCookie(req, res);
-      console.log(info);
       if(info == 'registered'){
         return res.redirect('/');
       }
