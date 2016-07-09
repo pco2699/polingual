@@ -9,6 +9,8 @@
     public user;
     public gender;
 
+    public submitted:boolean = false;
+
     constructor(public $http, public Auth, public $state, public appConfig) {
     }
 
@@ -21,7 +23,9 @@
       this.langs = this.appConfig.langs;
     }
 
-    update() {
+    update(form) {
+      this.submitted = true;
+      if(form.$valid) {
       this.$http.post('/api/interests', this.interests)
         .then(() =>{
           const user1 = this.Auth.getCurrentUser();
@@ -37,6 +41,7 @@
             })
           });
         }
+      }
     }
 
   angular.module('polingualApp')

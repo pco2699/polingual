@@ -45,9 +45,12 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
         li(ng-show='nav.isLoggedIn()')
           p.navbar-text Hello {{ nav.getCurrentUser().name }}
 
-        li(ng-show='nav.isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='settings')
-            span.glyphicon.glyphicon-cog
+        li(ng-show='nav.isLoggedIn()', ui-sref-active='active', uib-dropdown)
+            a(uib-dropdown-toggle)
+              span.glyphicon.glyphicon-cog
+            ul(uib-dropdown-menu)
+              li
+                a(ui-sref='profile') Profile Update
 
         li(ng-show='nav.isLoggedIn()')
           a(ui-sref='logout') Logout
