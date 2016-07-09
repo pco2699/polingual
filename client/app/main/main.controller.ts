@@ -11,7 +11,7 @@ class MainController {
     this.socket = socket;
     this.awesomeThings = [];
 
-    this.submit = function(lang){ $state.go('teachers', {lang:lang}) };
+    this.submit = function(lang){ $state.go('teachers', {lang: lang}); };
 
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');

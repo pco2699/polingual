@@ -65,6 +65,22 @@ export function show(req, res, next) {
 }
 
 /**
+ * Get a single user with all information
+ */
+export function showall(req, res, next) {
+  var userId = req.params.id;
+
+  return User.findById(userId).exec()
+    .then(user => {
+      if (!user) {
+        return res.status(404).end();
+      }
+      res.json(user);
+    })
+    .catch(err => next(err));
+}
+
+/**
  * Deletes a user
  * restriction: 'admin'
  */
@@ -161,13 +177,14 @@ export function getUsersByLang(req, res, next) {
 }
 
 /**
- *  * Get multiple users by him/her language, country, gender, interest
+ *  * Get multiple users by him/her language, country, gender, interest except login user
  *   */
 export function getUsersByAll(req, res, next) {
    var lang = req.params.language;
    var count = req.params.country;
    var gend = req.params.gender;
    var intr = req.params.interest;
+   var myid = req.params.myid;
    var qu = {
 	   role : 'user'
    };
@@ -181,6 +198,11 @@ export function getUsersByAll(req, res, next) {
 	   qu.gender = gend;
    }
    if(intr != 'NA'){
+   }
+
+   if(myid != 'NA'){
+	   qu._id = {};
+           qu._id.$ne = myid;
    }
    console.log(qu);
    return User.find(qu).exec()

@@ -26,11 +26,11 @@ class NavbarController {
     ];
     NavbarController.$inject = ['Auth', 'appConfig', '$stateParams', '$rootScope', '$scope', '$state'];
     this.submit = function(count, gend, lang, intr){
-	              $state.go('teachers', {count:count ,gend:gend ,lang:lang, intr:intr})
+         $state.go('teachers', {count: count, gend: gend, lang: lang, intr: intr} );
      };
   }
 
-  $onInit(){
+  $onInit() {
     this.genders = this.appConfig.gender;
     this.langs = this.appConfig.langs;
     this.dispSearch = this.$rootScope.dispSearch;

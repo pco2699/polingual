@@ -95,6 +95,16 @@ describe('User API Router:', function() {
 
   });
 
+  describe('GET /api/users/nonauth/:id', function() {
+
+    it('should route to user.controller.showall', function() {
+      routerStub.get
+        .withArgs('/:id', 'userCtrl.showall')
+        .should.have.been.calledOnce;
+    });
+
+  });
+
   describe('GET /api/users/bylang/:language', function() {
 
     it('should route to user.controller.getUsersByLang', function() {
@@ -105,11 +115,11 @@ describe('User API Router:', function() {
 
   });
 
-  describe('GET /api/users/byall/:language/:country/:gender/:interest', function() {
+  describe('GET /api/users/byall/:language/:country/:gender/:interest/:myid', function() {
 
     it('should route to user.controller.getUsersByAll', function() {
       routerStub.get
-        .withArgs('/:language/:country/:gender/:interest', 'userCtrl.getUsersByAll')
+        .withArgs('/:language/:country/:gender/:interest/:myid', 'userCtrl.getUsersByAll')
         .should.have.been.calledOnce;
     });
 

@@ -8,4 +8,4 @@ angular.module('polingualApp')
         template: '<main></main>',
         dispSearch: false
       });
-   })
+   };)

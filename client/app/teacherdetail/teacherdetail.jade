@@ -1,1 +1,9 @@
-div This is the teacherdetail view.
+.container
+  .row
+     .col-lg-6.col-lg-6.col-sm-12.col-xs-12.dbox
+        .dname {{$ctrl.teacher.name}}
+        .dimg
+            img(src="{{$ctrl.teacher.facebook.picture.data.url}}")
+        .dcount From: {{$ctrl.teacher.country}}
+        .dlang Speak: {{$ctrl.teacher.language}}
+        .rate ★★★★★
